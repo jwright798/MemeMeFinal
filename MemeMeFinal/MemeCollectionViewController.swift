@@ -11,6 +11,8 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MemeCollectionViewController: UICollectionViewController, UINavigationControllerDelegate{
+    
+    var memes = [Meme]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

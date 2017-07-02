@@ -9,6 +9,8 @@
 import UIKit
 
 class MemeTableViewController: UITableViewController {
+    
+    var memes = [Meme]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

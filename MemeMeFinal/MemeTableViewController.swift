@@ -14,8 +14,8 @@ class MemeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Sent Memes"
-
+        self.title = "Table"
+        self.navigationItem.title = "Sent Memes"
          self.navigationItem.leftBarButtonItem = self.editButtonItem
          self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         
@@ -55,6 +55,10 @@ class MemeTableViewController: UITableViewController {
         cell.memeText.text = "\(memes[indexPath.row].topText)...\(memes[indexPath.row].bottomText)"
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // Override to support conditional editing of the table view.

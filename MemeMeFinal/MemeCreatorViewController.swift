@@ -16,7 +16,7 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     
@@ -24,7 +24,7 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
         super.viewWillAppear(animated)
         //subscribeToKeyboardNotifications()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        saveButton.isEnabled = imageView.image != nil
+        shareButton.isEnabled = imageView.image != nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {

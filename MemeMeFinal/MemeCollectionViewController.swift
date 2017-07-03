@@ -16,7 +16,7 @@ class MemeCollectionViewController: UICollectionViewController, UINavigationCont
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Collection View"
+        self.title = "Sent Memes"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

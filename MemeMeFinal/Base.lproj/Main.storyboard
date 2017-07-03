@@ -14,7 +14,7 @@
         <scene sceneID="gs6-uU-lZW">
             <objects>
                 <tableViewController id="Ujj-2R-znp" customClass="MemeTableViewController" customModule="MemeMeFinal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gey-oY-RXM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gey-oY-RXM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,14 +26,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-gN-myx">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1F-gN-myx">
                                             <rect key="frame" x="18" y="3" width="81" height="72"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="72" id="fN1-uW-NIa"/>
                                                 <constraint firstAttribute="width" constant="81" id="ylr-uv-LWL"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-ep-WWa">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-ep-WWa">
                                             <rect key="frame" x="123" y="29" width="228" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -78,7 +78,7 @@
         <scene sceneID="tAR-CA-uaW">
             <objects>
                 <collectionViewController id="C5e-2U-EZp" customClass="MemeCollectionViewController" customModule="MemeMeFinal" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hhX-CB-Q3x">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hhX-CB-Q3x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,7 +117,14 @@
                             <outlet property="delegate" destination="C5e-2U-EZp" id="dmZ-K5-wTk"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="xII-UP-iAa"/>
+                    <navigationItem key="navigationItem" id="xII-UP-iAa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W6k-KF-62z">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="L0z-gu-HGX" kind="presentation" id="7Xi-Cl-rEV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkX-c8-ZcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,7 +156,7 @@
                     <tabBarItem key="tabBarItem" title="Table" id="YDg-fv-jT0"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Cu0-tQ-hP4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cu0-tQ-hP4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.27093706820000002" green="0.2187198253" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -173,7 +180,7 @@
                     <tabBarItem key="tabBarItem" title="Collection" id="QGq-SU-ccX"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eaQ-XO-pNp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eaQ-XO-pNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.27093706820000002" green="0.2187198253" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -260,10 +267,10 @@
                                 <action selector="cancelButtonPressed:" destination="5pL-ib-4QI" id="fyM-GB-GxN"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZRO-lq-yxf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="ZRO-lq-yxf">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="saveButtonPressed:" destination="5pL-ib-4QI" id="3aW-H6-KB2"/>
+                                <action selector="shareButtonPressed:" destination="5pL-ib-4QI" id="ctc-PV-IPc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -272,7 +279,7 @@
                         <outlet property="cameraButton" destination="nT9-9o-Y7n" id="kU6-M3-Bhq"/>
                         <outlet property="cancelButton" destination="ENa-ZF-GHd" id="HFN-9B-JM2"/>
                         <outlet property="imageView" destination="lgx-c1-X97" id="aYf-Pi-XSR"/>
-                        <outlet property="saveButton" destination="ZRO-lq-yxf" id="cib-4c-pmK"/>
+                        <outlet property="shareButton" destination="ZRO-lq-yxf" id="5Yw-DD-Woe"/>
                         <outlet property="toolBar" destination="WBj-tX-7Wg" id="UbF-Gb-CLS"/>
                         <outlet property="topTextField" destination="EzJ-GY-zOX" id="eKf-TZ-UuF"/>
                     </connections>
@@ -287,7 +294,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L0z-gu-HGX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dKP-KP-tdL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dKP-KP-tdL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.27093706823383734" green="0.21871982526771983" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -302,4 +309,7 @@
             <point key="canvasLocation" x="3407" y="-321"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lLJ-sJ-FA8"/>
+    </inferredMetricsTieBreakers>
 </document>
